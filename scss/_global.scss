@@ -1,0 +1,94 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    @extend %default-font;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.main {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+.container {
+    max-width: 1728px;
+    margin: 0 auto;
+}
+
+.container-fluid {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.menu {
+    &__list {
+        display: flex;
+    }
+
+    &__list-item {
+        margin-right: 77px;
+
+        &:last-child {
+            margin-right: 0px;
+        }
+    }
+
+    &__list-link {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 30px;
+        color: $black;
+
+        &:link,
+        &:active,
+        &:visited {
+            color: $black;
+        }
+
+        &:hover {
+            color: rgb(219, 50, 50);
+        }
+    }
+}
+
+.menu-btn {
+    display: none;
+    width: 66px;
+    height: 66px;
+    background: url(./../images/menu-btn.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.btn {
+    width: 270px;
+    height: 80px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    background: $violet;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+        background: $light-violet;
+    }
+
+    @media (max-width: 600px) {
+        width: 200px;
+        font-size: 20px;
+
+    }
+}
